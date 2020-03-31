@@ -45,6 +45,7 @@ var $Carousel = (function(){
         console.log('enter');
         page=1;
         var autoplay;
+        //跳转指定页面
         $("ul").on("click","li",function(){ 
             console.log($(this).text()-1); 
             page = $(this).text()-1;
@@ -64,7 +65,8 @@ var $Carousel = (function(){
             }
             else{
                 slider.style.left="-" + (page+1) + "00%";
-            }            
+            }    
+            page=page+2;        
         });
         //向左点击
         $('#left').click(function(){
